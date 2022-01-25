@@ -2,10 +2,12 @@
 
 ## Task 00 "Hello, World"
 
-Make a Hello World application using ESP-IDF. Your output must be exactly like in the example except for the device configuration output.
+Make a Hello World application using ESP-IDF.   
 
+Project dir and main function here [here](t00_HelloWorld/main/hello_world_main.c)
 
-![image](https://user-images.githubusercontent.com/74271908/151052056-e79761d0-477d-4b48-a5a4-b615dc483ba9.png)
+### OUTPUT:
+![image](img/output_00.png)
 
 
 
