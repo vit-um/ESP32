@@ -30,3 +30,20 @@ Turning on LED3
 Turning off all LEDs
 Works in loop mode, restart plz
 ```
+
+## Task 02 "
+
+Make `LED1` and `LED2` pulse slowly. You must use `PWM` for `LED1` and `DAC` for `LED2`.
+
+Project dir and main function [here](t02_LED/main/led_control_main.c)
+
+### CONSOLE OUTPUT:
+```
+LED1: Began fade up to duty 8191
+LED1: Began fade down to duty 8
+LED2: Achieved maximum voltage on the LED = 3.29V.
+LED1: Began fade up to duty 8191
+LED1: Began fade down to duty 8
+LED2: Achieved minimum voltage on the LED = 1.76V.
+```
+
