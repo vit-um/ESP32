@@ -7,8 +7,14 @@ Make a Hello World application using ESP-IDF.
 Project dir and main function here [here](t00_HelloWorld/main/hello_world_main.c)
 
 ### OUTPUT:
-![image](img/output_00.png)
-
+```
+Hello world!
+This is esp32 chip with 2 CPU cores, WiFi/BT/BLE, silicon revision 1, 4MB external flash
+Free heap: 299924
+Restarting in 10 seconds...
+Restarting in 9 seconds...
+Restarting in 8 seconds...
+```
 ## Task 01 "Turn on GPIO LEDs"
 
 Project dir and main function here [here](t01_LED/main/main/gpio_led_on.c)
