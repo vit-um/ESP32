@@ -53,4 +53,11 @@ Button `SW1` must affect `LED1`, and button `SW2` must affect `LED2`. The initia
 
 Project dir and main function [here](t03_SWITCH/main/sw_led_on.c)
 
+```
+Turning off all LEDs
+Press SW1: Toggle LED1
+Press SW2: Toggle LED2
+LED1 has been switched: level - 1
+LED2 has been switched: level - 1
+```
 
