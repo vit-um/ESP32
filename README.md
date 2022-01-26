@@ -31,11 +31,11 @@ Turning off all LEDs
 Works in loop mode, restart plz
 ```
 
-## Task 02 "
+## Task 02 "PWM and DAC"
 
 Make `LED1` and `LED2` pulse slowly. You must use `PWM` for `LED1` and `DAC` for `LED2`.
 
-Project dir and main function [here](t02_LED/main/led_control_main.c)
+Project dir and main function [here](t02_PWM_DAC/main/led_control_main.c)
 
 ### CONSOLE OUTPUT:
 ```
@@ -46,4 +46,11 @@ LED1: Began fade up to duty 8191
 LED1: Began fade down to duty 8
 LED2: Achieved minimum voltage on the LED = 1.76V.
 ```
+
+## Task 03 "Buttons"  
+
+Button `SW1` must affect `LED1`, and button `SW2` must affect `LED2`. The initial state of the `LED` is off. One press switches LED on, and another one switches it off. You must avoid switch bounce and be sure that the single button press always works properly.
+
+Project dir and main function [here](t03_SWITCH/main/sw_led_on.c)
+
 
