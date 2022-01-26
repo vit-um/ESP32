@@ -4,7 +4,7 @@
 
 Make a Hello World application using ESP-IDF.   
 
-Project dir and main function here [here](t00_HelloWorld/main/hello_world_main.c)
+Project dir and main function [here](t00_HelloWorld/main/hello_world_main.c)
 
 ### OUTPUT:
 ```
@@ -17,7 +17,7 @@ Restarting in 8 seconds...
 ```
 ## Task 01 "Turn on GPIO LEDs"
 
-Project dir and main function here [here](t01_LED/main/main/gpio_led_on.c)
+Project dir and main function [here](t01_LED/main/gpio_led_on.c)
 
 ### CONSOLE OUTPUT:
 ```
