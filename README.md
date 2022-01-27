@@ -82,3 +82,7 @@ Print string "RED GREEN BLUE DEFAULT\n" by using the second UART. Make a backgro
 Project dir and main function [here](t05_UART/main/esp_uart.c)
 ### CONSOLE OUTPUT:
 
+
+```
+RED GREEN BLUE DEFAULT
+```
