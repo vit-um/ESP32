@@ -161,3 +161,26 @@ I (20662) wave_gen: Output points num: 142
 Mute
 Unmute
 ```
+## Task 07 "OLED"
+
+Display 'Hello, World!' on the OLED. You are able to use font6x8.h from the resources
+
+Project dir and main function [here](t07_OLED/main/oled.c)
+
+### CONSOLE OUTPUT:
+
+```
+I (316) SH1106: Power on the OLED
+I (316) SH1106: OLED configured successfully
+Task 0 completed
+Task 1 completed
+The End
+```
+
+## Task 08 "Accelerometer"
+
+Make beep series (a sequence of sound tones using `DAC`) and enable all LEDs (`LED1`, `LED2`, `LED3`) when you flip the board (flip the board at least on `90` degrees from horizontal position in any direction).
+
+### CONSOLE OUTPUT:
+
+```
