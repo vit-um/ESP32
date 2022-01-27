@@ -64,7 +64,7 @@ Press SW2: Toggle LED2
 
 Get temperature and humidity from DHT11 and display them on the monitor.
 
-Project dir and main function [here](t04_ВРЕ11/main/уыз-вре.c)
+Project dir and main function [here](t04_ВРЕ11/main/esp-dht.c)
 
 ### CONSOLE OUTPUT:
 
