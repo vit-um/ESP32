@@ -117,6 +117,6 @@ defscrollback 10000
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
 ```
-`` `HTML
+`` ``HTML
 <font color="green"> Some green text </font>
 `` `
