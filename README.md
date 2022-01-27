@@ -126,6 +126,7 @@ There is a screen on:
 ```
 
 > kill 1013200
+> screen -list
 ```
 No Sockets found in /run/screen/S-vit.
 ```
