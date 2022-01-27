@@ -130,3 +130,34 @@ There is a screen on:
 ```
 No Sockets found in /run/screen/S-vit.
 ```
+## Task 06 "Speaker"
+
+Make any sound using the speaker.
+
+Project dir and main function [here](t06_WAWE_GEN/main/wave_gen.c)
+
+### CONSOLE OUTPUT:
+
+```
+Power on the sound amplifier
+I (312) wave_gen: Waveform: SINE
+I (322) wave_gen: Frequency(Hz): 1000
+I (322) wave_gen: Output points num: 142
+
+Press SW1: Mute
+Press SW2: Change Waveform
+I (17132) wave_gen: Waveform: TRIANGLE
+I (17132) wave_gen: Frequency(Hz): 1000
+I (17132) wave_gen: Output points num: 142
+
+I (18192) wave_gen: Waveform: SAWTOOTH
+I (18192) wave_gen: Frequency(Hz): 1000
+I (18192) wave_gen: Output points num: 142
+
+I (20662) wave_gen: Waveform: SQUARE
+I (20662) wave_gen: Frequency(Hz): 1000
+I (20662) wave_gen: Output points num: 142
+
+Mute
+Unmute
+```
