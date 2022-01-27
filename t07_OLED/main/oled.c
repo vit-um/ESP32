@@ -264,3 +264,28 @@ void app_main(void) {
 	task_sh1106_display_text2("\n\n\nAlternate font");
 	printf("\033[31mThe End\033[0m\n");
 }
+
+
+/*  version by pchernushe with oled module  (not working i2c_master_write_to_device !!! )
+#include "oled.h"
+
+void app_main(void) {
+
+    printf("Task 07. OLED.\n");
+
+    oled_init();
+
+    oled_set_cursor(2, 5 * 6);
+    oled_puts("Hello");
+    oled_set_cursor(3, 5 * 6);
+    oled_puts("World!");
+
+    uint8_t offset = 0;
+
+    while(1) {
+
+        oled_set_offset(offset++);
+
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
+} */
