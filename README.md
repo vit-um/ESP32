@@ -83,6 +83,36 @@ Project dir and main function [here](t05_UART/main/esp_uart.c)
 ### CONSOLE OUTPUT:
 
 
-```
+```bash
 RED GREEN BLUE DEFAULT
+```
+
+screen /dev/ttyUSB0 115200
+
+screen -list
+
+```
+There is a screen on:
+        1013200.pts-1.HP-x360   (27.01.22 22:29:08)     (Attached)
+1 Socket in /run/screen/S-vit.
+```
+> kill 1013200
+```
+No Sockets found in /run/screen/S-vit.
+```
+> nano ~/.screenrc 
+
+```bash
+# Выключаем приветствие
+startup_message off
+
+# включаем визуальный звонок
+vbell on
+
+# буфер для сохраненных строк делаем 10000
+defscrollback 10000
+
+# кастомим строку состояния
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
 ```
