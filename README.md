@@ -119,4 +119,4 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 ```
 ```html
 <font color="green"> Some green text </font>
-```
+```html
