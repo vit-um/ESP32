@@ -134,7 +134,7 @@ No Sockets found in /run/screen/S-vit.
 
 Make any sound using the speaker.
 
-Project dir and main function [here](t06_WAWE_GEN/main/wave_gen.c)
+Project dir and main function [here](t06_WAVE_GEN/main/wave_gen.c)
 
 ### CONSOLE OUTPUT:
 
