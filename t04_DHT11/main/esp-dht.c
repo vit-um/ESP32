@@ -182,3 +182,31 @@ void app_main(void) {
         vTaskDelay(5000 / portTICK_PERIOD_MS);
     }
 }
+
+/* version by pchernushe with dht11 module 
+
+#include "dht11.h"
+
+#define DHT11_POLLOUT_PERIOD_MS     3000
+
+void app_main(void) {
+
+    dht11_init();
+    dht11_turn_on();
+
+    printf("Task 04. DHT11 Sensor.\n");
+
+    dht11_data_t data = {0};
+
+    while(1) {
+
+        if (!dht11_get_data(&data)) {
+            printf("...\n");
+            printf("Temperature: %d C\n", data.temp_int);
+            printf("Humidity: %d %%\n", data.rh_int);
+            printf("...\n");
+        };
+        vTaskDelay(DHT11_POLLOUT_PERIOD_MS / portTICK_PERIOD_MS);
+    }
+} */
+
