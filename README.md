@@ -53,9 +53,28 @@ Button `SW1` must affect `LED1`, and button `SW2` must affect `LED2`. The initia
 
 Project dir and main function [here](t03_SWITCH/main/sw_led_on.c)
 
+### CONSOLE OUTPUT:
 ```
 Turning off all LEDs
 Press SW1: Toggle LED1
 Press SW2: Toggle LED2
 ```
 
+## Task 04 "DHT11"  
+
+Get temperature and humidity from DHT11 and display them on the monitor.
+
+Project dir and main function [here](t04_ВРЕ11/main/уыз-вре.c)
+
+### CONSOLE OUTPUT:
+
+```
+...
+Temperature: 28 C
+Humidity: 19 %
+...
+Temperature: 29 C
+Humidity: 95 %
+...
+
+```
