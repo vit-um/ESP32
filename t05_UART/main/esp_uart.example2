@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <string.h>
+#include "sdkconfig.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/uart.h"
+#include "esp_system.h"
+#include "esp_rom_sys.h"
+
+
+#define UART2_RX        16
+#define UART2_TX        17
+
+const char *color_red = "\033[31m";
+const char *color_green = "\033[32m";
+const char *color_blue = "\033[34m";
+const char *color_default = "\033[0m";
+const char *str_red = "RED ";
+const char *str_green = "GREEN ";
+const char *str_blue = "BLUE ";
+const char *str_default = "DEFAULT\n";
+
+
+void app_main(void) {
+
+    printf("Task 05. UART2\n");
+
+    uart_config_t uart_config;
+    uart_config.baud_rate = 115200;
+    uart_config.data_bits = UART_DATA_8_BITS;
+    uart_config.parity = UART_PARITY_DISABLE;
+    uart_config.stop_bits = UART_STOP_BITS_1;
+    uart_config.flow_ctrl = UART_HW_FLOWCTRL_DISABLE;
+    uart_config.source_clk = UART_SCLK_APB;
+    uart_config.rx_flow_ctrl_thresh = 0;
+    
+    ESP_ERROR_CHECK_WITHOUT_ABORT(uart_driver_install(UART_NUM_2, 256, 0, 0, NULL, 0));
+    ESP_ERROR_CHECK_WITHOUT_ABORT(uart_param_config(UART_NUM_2, &uart_config));
+    ESP_ERROR_CHECK_WITHOUT_ABORT(uart_set_pin(UART_NUM_2, UART2_TX, UART2_RX, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+
+    while(1) {
+
+        uart_write_bytes(UART_NUM_2, color_red, strlen(color_red));
+        uart_write_bytes(UART_NUM_2, str_red, strlen(str_red));
+
+        uart_write_bytes(UART_NUM_2, color_green, strlen(color_green));
+        uart_write_bytes(UART_NUM_2, str_green, strlen(str_green));
+
+        uart_write_bytes(UART_NUM_2, color_blue, strlen(color_blue));
+        uart_write_bytes(UART_NUM_2, str_blue, strlen(str_blue));
+
+        uart_write_bytes(UART_NUM_2, color_default, strlen(color_default));
+        uart_write_bytes(UART_NUM_2, str_default, strlen(str_default));
+
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
