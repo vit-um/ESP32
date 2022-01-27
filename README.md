@@ -82,28 +82,25 @@ Print string "RED GREEN BLUE DEFAULT\n" by using the second UART. Make a backgro
 Project dir and main function [here](t05_UART/main/esp_uart.c)
 ### CONSOLE OUTPUT:
 
+```
+I (305) uart: queue free spaces: 10
+I (305) TX_TASK: Wrote 62 bytes
+```
+
+Connect UART in second USB port and run this command:
+> screen /dev/ttyUSB0 115200
+
+### SCREEN OUTPUT:
 
 ```bash
-\033[H\033[2J\033[41mRED\033[0m \033[42mGREEN\033[0m \033[44mBLUE\033[0m DEFAULT\033[?25l
 RED GREEN BLUE DEFAULT
 ```
 
-screen /dev/ttyUSB0 115200
-
-screen -list
-
-```
-There is a screen on:
-        1013200.pts-1.HP-x360   (27.01.22 22:29:08)     (Attached)
-1 Socket in /run/screen/S-vit.
-```
-> kill 1013200
-```
-No Sockets found in /run/screen/S-vit.
-```
+Before that, I recommend setting it up in .screenrc:
 > nano ~/.screenrc 
 
-`` `bash
+Copy this code:
+```
 # Выключаем приветствие
 startup_message off
 
@@ -117,9 +114,18 @@ defscrollback 10000
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
 ```
-`` ``html
-<font color="green"> Some green text </font>
+
+Some useful commands:
+
+> screen -list
+
 ```
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
+There is a screen on:
+        1013200.pts-1.HP-x360   (27.01.22 22:29:08)     (Attached)
+1 Socket in /run/screen/S-vit.
+```
+
+> kill 1013200
+```
+No Sockets found in /run/screen/S-vit.
+```
