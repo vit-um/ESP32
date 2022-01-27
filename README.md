@@ -84,6 +84,7 @@ Project dir and main function [here](t05_UART/main/esp_uart.c)
 
 
 ```bash
+\033[H\033[2J\033[41mRED\033[0m \033[42mGREEN\033[0m \033[44mBLUE\033[0m DEFAULT\033[?25l
 RED GREEN BLUE DEFAULT
 ```
 
