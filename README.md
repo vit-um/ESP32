@@ -69,12 +69,16 @@ Project dir and main function [here](t04_DHT11/main/esp-dht.c)
 ### CONSOLE OUTPUT:
 
 ```
-...
 Temperature: 28 C
 Humidity: 19 %
 ...
 Temperature: 29 C
 Humidity: 95 %
-...
-
 ```
+## Task 05 "UART"
+
+Print string "RED GREEN BLUE DEFAULT\n" by using the second UART. Make a background color for words according to their names. Use the default console background for the DEFAULT word.
+
+Project dir and main function [here](t05_UART/main/esp_uart.c)
+### CONSOLE OUTPUT:
+
