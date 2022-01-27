@@ -6,7 +6,7 @@ Make a Hello World application using ESP-IDF.
 
 Project dir and main function [here](t00_HelloWorld/main/hello_world_main.c)
 
-### OUTPUT:
+### CONSOLE OUTPUT:
 ```
 Hello world!
 This is esp32 chip with 2 CPU cores, WiFi/BT/BLE, silicon revision 1, 4MB external flash
