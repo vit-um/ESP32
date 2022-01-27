@@ -181,6 +181,8 @@ The End
 
 Make beep series (a sequence of sound tones using `DAC`) and enable all LEDs (`LED1`, `LED2`, `LED3`) when you flip the board (flip the board at least on `90` degrees from horizontal position in any direction).
 
+Project dir and main function [here](t08_ADXL345/main/accelerometer.c)
+
 ### CONSOLE OUTPUT:
 
 ```
