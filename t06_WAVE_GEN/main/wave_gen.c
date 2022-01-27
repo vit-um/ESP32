@@ -10,6 +10,7 @@
 #include "driver/timer.h"
 #include "esp_log.h"
 
+
 /*  The timer ISR has an execution time of 5.5 micro-seconds(us).
     Therefore, a timer period less than 5.5 us will cause trigger the interrupt watchdog.
     7 us is a safe interval that will not trigger the watchdog. No need to customize it.
@@ -148,11 +149,11 @@ void app_main(void) {
         if (gpio_get_level(SW1_GPIO) == 0) {
             if (mute) {
                 mute = false;
-                printf("\033[31mMute\033[0\n");
+                printf("\n\033[31mMute\033[0\n");
             }
             else {
                 mute = true;
-                printf("\033[31mUnmute\033[0\n");
+                printf("\n\033[31mUnmute\033[0\n");
             }
             gpio_set_level(EN_AMP, mute);
         }
@@ -169,3 +170,24 @@ void app_main(void) {
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
+
+
+/* version by pchernushe with speaker module 
+#include "speaker.h"
+
+
+void app_main(void) {
+
+    printf("Task 06. Speaker\n");
+
+    speaker_init();
+    speaker_turn_on();
+
+    while(1) {
+
+        speaker_play_tone(300, DAC_CW_SCALE_1, 400);
+        speaker_play_tone(250, DAC_CW_SCALE_1, 300);
+
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+} */
