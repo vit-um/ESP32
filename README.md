@@ -174,6 +174,9 @@ I (316) SH1106: Power on the OLED
 I (316) SH1106: OLED configured successfully
 Task 0 completed
 Task 1 completed
+Task 2 completed
+Task 3 completed
+Task 4 completed
 The End
 ```
 
