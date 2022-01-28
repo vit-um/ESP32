@@ -1,9 +1,6 @@
 #include "screen.h"
 
 
-/* --- Defines --- */
-
-
 /* --- Typedefs --- */
 typedef struct screen_ctx {
     screen_page_e page;
@@ -36,14 +33,14 @@ void screen_init(void) {
     ctx.page = SCREEN_TEMPERATURE;
     ctx.orientation = SCREEN_UP;
 
-    oled_clear();
+    sh1106_display_clear();
     draw_buttons();
     draw_value();
 }
 
 void screen_update(void) {
     if(ctx.flip_event) {
-        oled_clear();
+        sh1106_display_clear();
         change_orient();
         draw_buttons();
         draw_value();
@@ -87,7 +84,7 @@ static void draw_button_a(void) {
     uint8_t button_offset = ctx.orientation == SCREEN_UP ? 64 : 0;
 
     oled_set_cursor(button_page, button_offset + 8);
-    ctx.page == SCREEN_TEMPERATURE ? oled_puts_inv("Temp") : oled_puts("Temp");
+    ctx.page == SCREEN_TEMPERATURE ? oled_puts_inv("Temp") : oled_puts("Temp");  //1 _inv
 }
 
 static void draw_button_b(void) {
@@ -95,7 +92,7 @@ static void draw_button_b(void) {
     uint8_t button_offset = ctx.orientation == SCREEN_UP ? 0 : 64;
 
     oled_set_cursor(button_page, button_offset + 8);
-    ctx.page == SCREEN_HUMIDITY ? oled_puts_inv("Humidity") : oled_puts("Humidity");
+    ctx.page == SCREEN_HUMIDITY ? oled_puts_inv("Humidity") : oled_puts("Humidity"); //1 _inv
 }
 
 static void draw_value(void) {

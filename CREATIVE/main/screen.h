@@ -1,8 +1,4 @@
-#include "oled.h"
-
-
-/* --- Defines --- */
-
+#include "sh1106.h"
 
 /* --- Enums --- */
 typedef enum screen_page {

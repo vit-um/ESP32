@@ -69,11 +69,11 @@ int dht11_get_data(dht11_data_t *data) {
     memset(data, 0, sizeof(dht11_data_t));
 
     //send start sequence
-    rmt_set_gpio(RMT_TX_CHANNEL, RMT_MODE_TX, DHT11_DATA_GPIO, 0);
+    rmt_set_pin(RMT_TX_CHANNEL, RMT_MODE_TX, DHT11_DATA_GPIO);
     ESP_ERROR_CHECK_WITHOUT_ABORT(rmt_write_items(RMT_TX_CHANNEL, start_seq, sizeof(start_seq) / sizeof(start_seq[0]), true));
 
     //receieve data
-    rmt_set_gpio(RMT_RX_CHANNEL, RMT_MODE_RX, DHT11_DATA_GPIO, 0);
+    rmt_set_pin(RMT_RX_CHANNEL, RMT_MODE_RX, DHT11_DATA_GPIO);
     ESP_ERROR_CHECK_WITHOUT_ABORT(rmt_rx_start(RMT_RX_CHANNEL, true));
     items = (rmt_item32_t *)xRingbufferReceive(rb, &length, 10);
 
