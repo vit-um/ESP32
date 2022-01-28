@@ -174,6 +174,9 @@ I (316) SH1106: Power on the OLED
 I (316) SH1106: OLED configured successfully
 Task 0 completed
 Task 1 completed
+Task 2 completed
+Task 3 completed
+Task 4 completed
 The End
 ```
 
@@ -185,4 +188,9 @@ Project dir and main function [here](t08_ADXL345/main/accelerometer.c)
 
 ### CONSOLE OUTPUT:
 
+```
+Press SW1 for print XYZ-acceleration 
+Acceleration:   X=13    Y=-2    Z=-257
+Acceleration:   X=-11   Y=-262  Z=12
+Acceleration:   X=-239  Y=-2    Z=6
 ```
