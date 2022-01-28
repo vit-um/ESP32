@@ -189,3 +189,8 @@ Project dir and main function [here](t08_ADXL345/main/accelerometer.c)
 ### CONSOLE OUTPUT:
 
 ```
+Press SW1 for print XYZ-acceleration 
+Acceleration:   X=13    Y=-2    Z=-257
+Acceleration:   X=-11   Y=-262  Z=12
+Acceleration:   X=-239  Y=-2    Z=6
+```
