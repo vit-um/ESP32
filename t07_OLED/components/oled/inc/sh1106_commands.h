@@ -1,6 +1,3 @@
-#ifndef MAIN_SH1106_H_
-#define MAIN_SH1106_H_
-
 // Following definitions are bollowed from 
 // https://www.elecrow.com/download/SH1106%20datasheet.pdf
 
@@ -75,6 +72,12 @@
 #define OLED_CMD_SET_CHARGE_PUMP_ON 0x0B
 #define OLED_CMD_SET_CHARGE_PUMP_OFF 0x0A
 
+// 1. Set lower column address | 4 lower bytes
+#define SH1106_SETLOWCOLUMN             0x00
+
+// 2. Set higher column adress | 4 higher bytes
+#define SH1106_SETHIGHCOLUMN            0x10
+
 
 // 9. Set multiplex ration (double byte)
 #define SH1106_SETMULTIPLEX             0xA8
@@ -87,9 +90,10 @@
 // 12. Set page address | page address
 #define SH1106_PAGE_ADDRESS             0xB0
 
+// 14. Set display offset (double byte)
+#define SH1106_SETDISPLAYOFFSET         0xD3
+
 // 17. Set common pads hardware configuration (double byte)
 #define SH1106_SETCOMPINS               0xDA
 #define SH1106_SETCOMPINS_SEQUENTIAL    0x02
 #define SH1106_SETCOMPINS_ALTERNATIVE   0x12
-
-#endif /* MAIN_SH1106_H_ */
